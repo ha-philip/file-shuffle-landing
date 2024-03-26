@@ -1,0 +1,455 @@
+//-------------------Header
+.헤더-컨테이너 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .헤더 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(24, 23, 31);
+        padding: 0 4rem;
+
+        .헤더-로고 {
+            color: #1047fb;
+            font-size: 25px;
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+        }
+
+        .헤더-메뉴컨테이너 {
+            color: white;
+
+            div {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .헤더-작은메뉴 {
+                margin-top: 15px;
+                color: #a2a2a2;
+                font-weight: lighter;
+                gap: 20px;
+
+                a {
+                    color: #a2a2a2;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+
+            .헤더-메인메뉴 {
+                margin-top: 15px;
+                gap: 50px;
+                position: relative;
+
+                h4 {
+                    padding: 0.5rem 0;
+                    display: flex;
+                    font-size: 21px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    cursor: pointer;
+                    border-bottom: 3px solid rgb(24, 23, 31);
+                    letter-spacing: -0.05rem;
+
+                    svg {
+                        stroke-width: 4;
+                        width: 10px;
+                        height: 10px;
+                        transition: all .3s;
+                    }
+
+                    &:hover {
+                        border-bottom: 3px solid #265df4;
+                        color: #265df4;
+
+                        svg {
+                            transform: rotateZ(180deg);
+                        }
+
+                        .드롭다운 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            z-index: 1;
+                        }
+                    }
+
+                    .드롭다운 {
+                        z-index: -999;
+                        width: 900px;
+                        background-color: white;
+                        position: absolute;
+                        right: 0;
+                        top: 40px;
+                        display: none;
+                        transition: .5s;
+                        padding: 2rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//--------------Dropdown
+.드롭다운-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+//--------------Scroll Top Button{
+.스크롤-탑-버튼 {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    border: none;
+    padding: 8px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    svg {
+        stroke-width: 3px;
+        stroke: #ffffff9f;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+//--------------Home
+.메인-배경 {
+    width: 100%;
+    height: 100dvh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.7)),
+        url("https://png.pngtree.com/background/20230613/original/pngtree-digital-technology-background-with-dark-lines-and-lines-picture-image_3386207.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding: 0 7rem;
+
+    .메인-인덱스 {
+        color: white;
+
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 21px;
+            width: 600px;
+            margin: 3rem 0;
+        }
+
+        .메인-체크 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            p {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+
+                svg {
+                    stroke-width: 4px;
+                    stroke: #e52662;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        button {
+            margin: 5rem 0;
+            position: relative;
+            border: none;
+            border-radius: 50px;
+            padding: 18px 80px;
+            font-size: 21px;
+            background: linear-gradient(90deg, rgb(55, 250, 195), rgb(62 236 117));
+            cursor: pointer;
+            transition: all .3s;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                stroke-width: 2px;
+                stroke: white;
+                opacity: 0;
+                transition: all .3s;
+                scale: 0.05;
+            }
+
+            &:hover {
+                scale: 1.02;
+                color: #00000000;
+
+                svg {
+                    scale: 1;
+                    opacity: 1;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+//-----------Sector
+.섹터A {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 37px;
+    }
+
+    hr {
+        width: 15px;
+        border: 2px solid rgb(94, 94, 247);
+    }
+
+    h2 {
+        color: #676767;
+        font-size: 18px;
+    }
+
+    .섹터A-내용 {
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .섹터A-콘텐츠 {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .섹터A-아이콘텍스트 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                h4 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: #676767;
+                    margin-top: 10px;
+                    max-width: 500px;
+                }
+            }
+        }
+
+    }
+
+    button {
+        border: 1px solid black;
+        background-color: white;
+        font-size: 21px;
+        padding: 15px 60px;
+        border-radius: 50px;
+        font-weight: lighter;
+        transition: all .1s;
+        cursor: pointer;
+
+        &:hover {
+            color: #1047fb;
+            border-color: #1047fb;
+            background-color: whitesmoke;
+        }
+    }
+}
+
+.섹터B {
+    height: 70dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 200px;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url("https://as1.ftcdn.net/v2/jpg/04/08/36/52/1000_F_408365227_4SSRBCqNBwHJ5rjEdbuN8s4VGyZ2S5EM.jpg");
+    background-size: cover;
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        width: 600px;
+        font-size: 20px;
+        line-height: 40px;
+        margin: 30px 0 60px 0;
+    }
+
+    button {
+        border: 1.5px solid white;
+        color: white;
+        background: none;
+        font-size: 21px;
+        padding: 15px 60px;
+        border-radius: 50px;
+        font-weight: lighter;
+        transition: all .1s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(245, 245, 245, 0.1);
+        }
+    }
+}
+
+.섹터C {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(209, 209, 209);
+    padding: 50px 0 0 40px;
+    gap: 50px;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        h1 {
+            font-size: 35px;
+        }
+
+        h2 {
+            width: 500px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 30px 0 60px 0;
+        }
+
+        button {
+            border: 1px solid black;
+            background: none;
+            font-size: 21px;
+            padding: 15px 60px;
+            border-radius: 50px;
+            font-weight: lighter;
+            transition: all .1s;
+            cursor: pointer;
+
+            &:hover {
+                color: #1047fb;
+                border-color: #1047fb;
+                background-color: whitesmoke;
+            }
+        }
+    }
+}
+.섹터D {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 31, 50);
+    gap: 50px;
+    padding: 35px 0;
+color: white;
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        h1 {
+            font-size: 35px;
+        }
+
+        h2 {
+            width: 500px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 30px 0 60px 0;
+        }
+
+        button {
+            border: 1px solid white;
+            color: white;
+            background: none;
+            font-size: 21px;
+            padding: 15px 60px;
+            border-radius: 50px;
+            font-weight: lighter;
+            transition: all .1s;
+            cursor: pointer;
+
+            &:hover {
+                color: #1047fb;
+                border-color: #1047fb;
+                background-color: whitesmoke;
+            }
+        }
+    }
+}
+
+.섹터E {
+    height: 70dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    h1 {
+        font-size: 37px;
+    }
+
+    hr {
+        width: 15px;
+        border: 2px solid rgb(94, 94, 247);
+    }
+
+    h2 {
+        color: #676767;
+        font-size: 18px;
+    }
+    .섹터E-사진들{
+        background-color: white;
+        padding: 50px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 50px 0;
+        box-shadow: 3px 3px 6px #767676;
+    }
+}
+//----------------Footer
+.푸터{
+    background-color: rgb(19,19,19);
+    color: #676767;
+    font-size: 15px;
+    padding: 30px;
+}
